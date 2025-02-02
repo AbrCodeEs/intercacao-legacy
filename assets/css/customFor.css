@@ -1,0 +1,39 @@
+.fancybox-margin {
+  margin-right: 0px;
+}
+
+.monica-reading-highlight {
+  animation: fadeInOut 1.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    background-color: transparent;
+  }
+
+  30%, 70% {
+    background-color: rgba(2, 118, 255, 0.20);
+  }
+}
+
+.op8,
+.op7,
+.op6,
+.op5,
+.op4,
+.op3,
+.op2,
+.op1 {
+  position: fixed !important;
+}
+
+.op8 a,
+.op7 a,
+.op6 a,
+.op5 a,
+.op4 a,
+.op3 a,
+.op2 a,
+.op1 a {
+  display: block;
+}

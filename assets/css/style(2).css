@@ -1,0 +1,1663 @@
+/*
+ Theme Name: Wizard
+ Theme URI: http://wizard.beantownthemes.com/
+ Description: Fullpage Portfolio WordPress Theme
+ Author: Fialovy & BeantownThemes
+ Author URI: http://themeforest.net/user/BeantownThemes
+ Version: 2.3
+ License: GNU General Public License
+ Tags: fluid-layout, fixed-layout, translation-ready, microformats, rtl-language-support, dark, light, white, black, gray, one-column, two-columns, right-sidebar,  custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
+ License URI: license.txt
+ */
+
+@import 'https://cdn.rawgit.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css';
+
+
+@font-face {
+  font-family: 'Giorgio';
+  src: url('Giorgio.tff');
+}
+
+/* wordpress classes*/
+.wp-caption{}
+.wp-caption-text {}
+.alignleft{float:left; margin-right:10px;text-align:left;}
+.alignright{float:right; margin-left:10px;text-align:right;}
+.aligncenter {margin:auto;text-align:center;}
+.sticky {}
+.bypostauthor {}
+.gallery-caption {}
+.right{text-align:right;}
+.align_center{ text-align:center }
+
+.section .wpb_row{margin-bottom:0px;}
+.section .vc_col-sm-12{padding:0px;}
+
+.scroll_section.flex_bg .wpb_text_column{position:absolute;}
+.scroll_section .flexslider{z-index:-1;}
+
+.page-subtitle_right{
+	  color: #fff;
+  border-bottom: rgba(255,255,255,0.4) solid 1px;
+    text-align: right;
+    
+}
+.page-subtitle_right:before {
+	position: relative;
+	content: '';
+	left: 0;
+	bottom: 0;
+	margin-bottom: -1px;
+	width: 80px;
+	height: 1px;
+  background-color: rgba(255,255,255,1);
+  
+    left: inherit;
+  right: 0;
+ }
+
+.section .overlay{z-index:0;}
+
+.white_text *{color:#fff !important;}
+/* --- GAPS --- */
+
+.gap_0{ margin-bottom: 0 !important; }
+.gap_5{ margin-bottom: 5px !important; }
+.gap_10{ margin-bottom: 10px !important; }
+.gap_15{ margin-bottom: 15px !important; }
+.gap_20{ margin-bottom: 20px !important; }
+.gap_25{ margin-bottom: 25px !important; }
+.gap_30{ margin-bottom: 30px !important; }
+.gap_35{ margin-bottom: 35px !important; }
+.gap_40{ margin-bottom: 40px !important; }
+.gap_45{ margin-bottom: 45px !important; }
+.gap_50{ margin-bottom: 50px !important; }
+.gap_55{ margin-bottom: 55px !important; }
+.gap_60{ margin-bottom: 60px !important; }
+
+h1,h2,h3,h4,h5,h6{font-weight:normal;
+-webkit-font-feature-settings: "lnum"; 
+-moz-font-feature-settings: "lnum"; 
+font-feature-settings: "lnum"; 
+}
+
+.flex-caption div.button br,div.button p{display:none;}
+#flv_layout .wpb_row{margin-bottom:0px;}
+
+.portfolio-panel1 .portfolio-item {  margin-bottom: 0px;}
+
+h2.page-title:before,h3.page-title:before,h4.page-title:before,h5.page-title:before,h6.page-title:before{
+	position: absolute;
+	content: '';
+	bottom: 0;
+	margin-bottom: -1px;
+	width: 80px;
+	height: 1px;
+	background-color: rgba(71,71,71,1);
+}
+h2.page-title,h3.page-title,h4.page-title,h5.page-title,h6.page-title{
+	border-bottom: rgba(224,224,224,1) solid 1px;
+	position:relative;
+}
+.nop p {display:none;}
+.nopaddings {padding:0px !important;}
+
+.carousel-item .service-item br{display:none;}
+
+.aboutus-section .about-us-element i,.us-section .about-us-element i {
+    font-size: 140px;
+    color: #fff;
+}
+
+.aboutus-section blockquote, .us-section blockquote {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.aboutus-section p,.us-section p {
+margin:0
+}
+
+
+.flv_video .container-fluid,
+.flv_video .container-fluid > .wpb_row,
+.flv_video .container-fluid > .wpb_row > .wpb_column {height:100%;}
+
+#aboutus-section .container-fluid {
+	padding:0px;
+}
+#fullpage.normalScroll {
+  margin-bottom: -22px;
+}
+/* calendar widget */
+#wp-calendar, #wp-calendar tr {width: 100%; border:0 }
+#wp-calendar caption { text-align: right; color: #333; font-size: 12px; margin-top: 10px; margin-bottom: 15px; }
+#wp-calendar thead { font-size: 10px; }
+#wp-calendar thead th { padding-bottom: 10px; }
+#wp-calendar tbody { color: #aaa; }
+#wp-calendar tbody td { background: #F9f9f9; border: 1px solid #fff; text-align: center; padding:8px;}
+#wp-calendar tbody td:hover { background: #fff; }
+th{text-align:center}
+#wp-calendar tbody .pad { background: none; }
+#wp-calendar tfoot #next { font-size: 10px; text-transform: uppercase; text-align: right; }
+#wp-calendar tfoot #prev { font-size: 10px; text-transform: uppercase; padding-top: 10px; }
+
+/* hide labels */
+label.screen-reader-text {display:none}
+
+/* recent comments widget */
+span.comment-author-link {display:block}
+.widget ul li.recentcomments {font-weight:normal}
+.widget ul li.recentcomments a, .widget ul li.recentcomments .comment-author-link  {font-weight:bold}
+
+/* rss widget */
+.rsswidget img{display:none}
+a.rsswidget:hover{text-decoration:none}
+span.rss-date {display:block;font-weight:normal}
+.widget cite {font-weight:normal}
+
+/* text widget */
+.textwidget img {margin-bottom:10px}
+.textwidget .wp-caption img {margin-bottom:0px}
+
+.widget select {width:100%;max-width:100%}
+.hide_flv{display:none;}
+
+.fab.ripple a{width:100%;height:100%;display:block}
+
+.msg_close{
+	cursor:pointer;
+	padding: 0 4px;
+	height:10px;
+	background-color:red;
+	color:white;
+}
+
+@media only screen and (max-device-width: 580px) {
+.owl_slide4 .portfolio-detail{
+    bottom:0px !important;
+}
+}
+	
+.portfolio-filter li.filter:after{
+    top:7px;
+}
+.portfolio-filter li.filter{
+        display: inline-block;
+}
+#fullpage .section{overflow:visible;}
+
+.fp-tableCell, .fp-section .fp-tableCell{
+vertical-align:top;
+}
+
+.subtitle-center h1{font-size:32px; text-align:left;font-weight:400;}
+
+p,body,p.p1, .trazabilidad p{
+font-size:18px;
+text-align:left;
+-webkit-font-feature-settings: "lnum"; 
+-moz-font-feature-settings: "lnum"; 
+font-feature-settings: "lnum"; 
+color:black;
+}
+
+body{overflow:visible;}
+
+
+p{
+margin:0px 0px 1.1em;}
+
+.nav-open .midnightHeader.default .menu-burger .menu1,
+.nav-open .midnightHeader.default .menu-burger .menu2,
+.nav-open .midnightHeader.default .menu-burger .menu3 {
+ background-color: #432a19 !important; 
+border: 1px solid #80A41B;
+}
+/* #432a19  cacaotales #be2239 */
+
+#main-menu{
+background-repeat: repeat-y;
+
+}
+#main-menu .sidebar-nav {
+background-color: #432918 !important; 
+color:#ffffff;
+}
+
+#main-menu .nav-menu ul{
+
+}
+#main-menu .nav-menu li {
+background-color: #80A41B !important;
+opacity:0.95;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+filter: alpha(opacity=95);
+border-top:#ffffff solid 1px
+
+}
+#main-menu .nav-menu li:after {
+background-color: #432918 !important;
+z-index:-1;
+}
+
+#main-menu .nav-menu li:last-child{
+border-bottom:#ffffff solid 1px
+}
+
+.nav-close .menu-close{
+z-index:4;
+}
+.menu-close .menu1,.menu-close .menu2, #main-menu .menu-close .menu1, #main-menu .menu-close .menu2{
+background-color:#80A41B;
+}
+#main-menu .nav-menu li.active a,#main-menu .nav-menu li a{
+font-size:1.0em;
+text-align:left;
+
+}
+
+#main-menu .nav-menu li a {
+z-index:3;
+color:white;
+}
+#main-menu .nav-menu li a:hover{
+color:#efefef;
+}
+
+div.sidebar-nav.left{
+left:0px;
+}
+
+h1.slide-title-notthatlarge{
+font-size:40px;
+color:#efefef;
+}
+
+/* Opcion de color dos*/
+
+
+div.chuao .line-before:before, div.chuao .line-after:before, div.chuao h2.page-subtitle {
+/*border-bottom:rgba(66,66,66,0.4) solid 1px;*/
+border-bottom:0px;
+}
+
+.chuao-title span.toten{
+color:#0000ff;
+}
+div.chuao h2.page-subtitle.lefty,
+.content-block3.dark .text-block h2{
+color:#333333;
+}
+/* chuao */
+div.chuao h2.page-subtitle.lefty:before,div.chuao h2.page-subtitle:before {
+/*border-bottom: rgba(0,0,255,1) solid 1px;
+background-color:#1d71b9;*/
+border-bottom:0px;
+}
+div.chuao .line-after:after,
+div.chuao .line-before:after, div.chuao h3.page-subtitle:before{
+   /*background-color:#1d71b9;*/
+}
+/* choroni */
+div.choroni h2.page-subtitle.lefty:before,div.choroni h2.page-subtitle:before {
+/*border-bottom: #e8511e solid 1px;
+background-color:#e8511e;*/
+border-bottom:0px;
+}
+div.choroni .line-after:after,
+div.choroni .line-before:after, div.choroni h3.page-subtitle:before{
+   /*background-color:#e8511e;*/
+}
+/* patanemo */
+div.patanemo h2.page-subtitle.lefty:before,div.patanemo h2.page-subtitle:before {
+/*border-bottom: #14a199 solid 1px;
+background-color:#14a199;*/
+border-bottom:0px;
+}
+div.patanemo .line-after:after,
+div.patanemo .line-before:after, div.patanemo h3.page-subtitle:before{
+ /*  background-color:#14a199;*/
+border-bottom:0px;
+}
+/* mantuano */
+div.mantuano h2.page-subtitle.lefty:before,div.mantuano h2.page-subtitle:before {
+border-bottom: #e30812 solid 1px;
+background-color:#e30812;
+}
+div.mantuano .line-after:after,
+div.mantuano .line-before:after, div.mantuano h3.page-subtitle:before{
+   /*background-color:#e30812;*/
+}
+/* canoabo */
+div.canoabo h2.page-subtitle.lefty:before,div.canoabo h2.page-subtitle:before {
+/*border-bottom: #fbb030 solid 1px;
+background-color:#fbb030;*/
+border-bottom:0px;
+}
+div.canoabo .line-after:after,
+div.canoabo .line-before:after, div.canoabo h3.page-subtitle:before{
+   /*background-color:#fbb030;*/
+}
+
+h2.lefty:before, div.chuao h2.lefty:before,.content-block3.dark .text-block div.chuao h2.lefty:before{
+/*left:inherit;
+right:0px;*/
+text-align:left;
+}
+div.chuao h2.page-subtitle, div.chuao h2.page-subtitle.lefty, .content-block3.dark .text-block div.chuao h2{
+/*border-bottom:rgba(99,99,99,0.4) solid 1px;*/
+border-bottom:0px;
+ text-align:left;
+}
+
+div.home-section{
+
+}
+
+.home-section-cut{
+box-shadow: -5px -0px 30px 2px #cccccc;
+}
+
+.cocoa-product{
+ text-align:center;
+}
+
+
+h1.cocoa-title, 
+h1.cocoa-title-bold{
+text-align:center;
+font-size:30px;
+font-weight:regular;
+text-align:center;
+margin:0px;
+color:white;
+margin-top:0px;
+margin-bottom:0px;
+background: url('http://www.intercacao.com/wp-content/uploads/2017/02/Sprite-Productos-Gourmet.png');
+padding: 0px;
+}
+
+h1.cocoa-title{
+	background-position: 0px 0px;
+}
+
+h1.cocoa-title-bold{
+font-weight:bold;
+}
+
+
+.chuao h1.cocoa-title-bold{
+background-position: 0px 84px;
+}
+.choroni h1.cocoa-title-bold{
+background-position: 0px 364px;
+}
+.canoabo h1.cocoa-title-bold{
+background-position: 0px 168px;
+}
+.mantuano h1.cocoa-title-bold{
+background-position: 0px 252px;
+}
+.patanemo h1.cocoa-title-bold{
+background-position: 0px 196px;
+}
+.manapiare h1.cocoa-title-bold{
+background-position: 0px 336px;
+}
+.huila h1.cocoa-title-bold{
+background-position: 0px 140px;
+}
+.tumaco h1.cocoa-title-bold{
+background-position: 0px 280px;
+}
+.trincheras h1.cocoa-title-bold{
+background-position: 0px 308px;
+}
+.porcelana h1.cocoa-title-bold{
+background-position: 0px 112px;
+}
+/*
+cambio como nativo y paloblanco en otro css
+.riocaribe h1.cocoa-title-bold{
+background-position: 0px 224px;
+}*/
+.ocumare h1.cocoa-title-bold{
+background-position: 0px 28px;
+}
+.carenero h1.cocoa-title-bold{
+background-position: 0px 56px;
+}
+
+
+
+
+.cocoa-product h1{
+margin: 0 auto;
+width: 310px;
+text-align: center;
+border:0px solid red;
+display: inline-block;
+letter-spacing: 2px;
+height: 29px;
+}
+
+
+/* 
+PERUUUU
+*/
+
+.nativoblanco h1.cocoa-title,.paloblanco h1.cocoa-title{
+display:none;
+}
+.nativoblanco h1.cocoa-title-bold{
+background: url(http://www.intercacao.com/wp-content/uploads/2017/04/Sprite-Titulos-Piura-y-Chulucana-040417-min.png) 0px 0px no-repeat;
+height:94px;
+}
+.paloblanco h1.cocoa-title-bold{
+background: url(http://www.intercacao.com/wp-content/uploads/2017/04/Sprite-Titulos-Piura-y-Chulucana-040417-min.png) 0px -94px no-repeat;
+height:94px;
+}
+
+.riocaribe h1.cocoa-title-bold{
+background: url(http://www.intercacao.com/wp-content/uploads/2017/06/Titulo-Menu-Rio-Caribe-260617-min.png) 3px 0px/302px no-repeat;
+height:106px;
+}
+
+.cocoa-product h1 span{
+	display: none;
+}
+
+div.cut-board h3{
+text-align:center;
+}
+
+div.cut-board h3.cocoa-cut-title{
+font-size:19px;
+color:#fafafa;
+font-weight: regular;
+margin:0px;
+text-aling:center;
+margin-top:25px;
+margin-bottom:8px;
+}
+
+div.cut-board line-before, 
+div.cut-board line-after{
+display:none;
+}
+
+div.cut-board-container{
+text-aling:center;
+width:100%;
+}
+
+div.cut-board{
+width:300px;
+margin: 0 auto; 
+padding-top:38px;
+}
+
+div.cut-board p{
+	position: relative;
+	
+}
+div.cut-board p span.points{
+letter-spacing: 3px;
+	
+}
+div.cut-board p span.cut-value{
+	display:inline-block;
+	position: absolute;
+	right:0px;
+	padding-left: 4px;
+	background: #432918 !important;
+	border:0px solid red;
+}
+div.cut-board p span.cut-value.decimal{
+	letter-spacing: 1px;
+}
+div.cut-board p span.cut-value.stared img{
+	vertical-align: top;
+}
+
+
+
+.cocoa-product img{
+width:310px;
+margin-bottom:15px;
+}
+div.cocoa-bar{
+width: 310px;
+height:5px;
+margin:0 auto;
+}
+.chuao div.cocoa-bar{
+
+border-top:11px solid #1d71b9;
+}
+.choroni div.cocoa-bar{
+
+border-top:11px solid #e8511e;
+}
+.canoabo div.cocoa-bar{
+
+border-top:11px solid #fbb030;
+}
+.mantuano div.cocoa-bar{
+
+border-top:11px solid #e30812;
+}
+.patanemo div.cocoa-bar{
+
+border-top:11px solid #14a199;
+}
+
+/* nuevos productos */
+.manapiare div.cocoa-bar{
+
+border-top:11px solid #68237e;
+}
+.huila div.cocoa-bar{
+
+border-top:11px solid #106136;
+}
+.tumaco div.cocoa-bar{
+
+border-top:11px solid #95c31a;
+}
+.trincheras div.cocoa-bar{
+
+border-top:11px solid #673c11;
+}
+.porcelana div.cocoa-bar{
+
+border-top:11px solid #e70087;
+}
+.riocaribe div.cocoa-bar{
+
+border-top:11px solid #c01623;
+}
+.ocumare div.cocoa-bar{
+
+border-top:11px solid #282e84;
+}
+.carenero div.cocoa-bar{
+border-top:11px solid #ffdd12;
+}
+
+.nativoblanco div.cocoa-bar{
+
+border-top:11px solid #b17d49;
+}
+.paloblanco div.cocoa-bar{
+
+border-top:11px solid #dddd00;
+}
+
+
+
+
+
+div.cut-board, div.cut-board p, div.cut-board h3{
+color:#f0f0f0;
+}
+
+div.cut-board p{
+font-size:16px;
+font-weight: lighter;
+margin-bottom:2px;
+text-align:left;
+padding:0px;
+white-space: nowrap;
+overflow: hidden;
+}
+
+div.cut-board p.highlight{
+font-weight: bold;
+}
+
+.trazabilidad-section .blockquote2{
+margin-top:30px;
+padding-top:0px;
+}
+
+div.myVideo:after{
+content: '';
+position: absolute;
+top: -1000%;
+right: -1000%;
+bottom: -1000%;
+left: -1000%;
+opacity: .75;
+background-image: url(http://www.intercacao.com/wp-content/uploads/2016/11/diagonal-checkerboard.png);
+background-size: 4px;
+transform-origin: center;
+-webkit-transform: rotate(15deg);
+-moz-transform: rotate(15deg);
+-ms-transform: rotate(15deg);
+-o-transform: rotate(15deg);
+transform: rotate(15deg);
+}
+
+.block-title {
+margin:8px 0px;
+}
+.block-title h1{
+text-align:left;
+font-size:38px;
+}
+
+.line-before,.line-after, .block-title p{}
+
+.section-title h1.page-subtitle{
+font-size:32px;
+text-align:left;
+font-weight:800;
+}
+.section-title h1.page-subtitle.main-title{
+font-size:40px;
+}
+
+.mega-hoversubtitle .filtros, div.filtros, div.mega-hovertitle .filtros{
+display:none;
+}
+
+/* Mobiles o display menores a 768px de ancho */
+
+@media (max-width: 768px) { 
+.block-title h1{
+ padding:0px 0px;
+}
+
+.mega-hover,.portfolio-item .mega-hover{
+font-size:12px;
+}
+
+
+.section-title h1.page-subtitle{
+font-size:24px;
+font-weight:600;
+}
+.block-title h1{ white-space:normal;}
+.subtitle-center h1{font-size:20px; text-align:left;font-weight:300;}
+.page-subtitle {font-size:18px;}
+.block-title line-before,.block-title line-after{display:none;}
+
+p,p.p1{
+text-align:left;
+}
+
+div.cut-board p{
+padding-left:0px;
+}
+
+#fp-nav{
+
+display:none;
+}
+
+div.type-md > div.box-content-md{
+text-align:center;
+}
+}/* fin mobile 840 */
+
+/* mobile 450 
+@media (max-width: 450px) {
+
+.mega-entry{width:250px;}
+
+.megafolio-container.norounded .mega-entry .mega-entry-innerwrap{
+background-size: 238px 238px !important;
+}
+
+.mega-hover,.portfolio-item .mega-hover{
+font-size:12px;
+width:238px;
+position:relative;
+margin:0 auto;
+}
+
+}
+/* fin mobile 450 */
+
+.page-subtitle {
+font-size:26px;
+vertical-align: text-top;
+margin:0px 0px 14px;
+padding: 0px 0px 2px;
+border-bottom:0px;
+ text-align:left;
+}
+
+h1.page-title:before, .page-subtitle:before{
+border-bottom:0px;
+background-color:transparent;
+height:0px;
+}
+
+table.cococa-table  tr td{
+vertical-align: center;
+}
+
+.wpb_content_element{
+margin-bottom:14px;
+}
+
+.chuao blockquote, .intercacao blockquote, .choroni blockquote, .canoabo blockquote{
+background-color:transparent;
+border-left:1px solid #cccccc;
+border-right:1px solid #cccccc;
+padding-left:8px;
+padding-right:8px;
+font-weight:bold;
+font-style: italic;
+}
+
+blockquote > span.regular, blockquote span.regular, span.regular{
+font-weight:normal;
+}
+
+div.box-set-md{
+text-align:left;
+}
+
+div.type-md{}
+div.days-md{}
+
+div.days-md > div.box-content-md{
+padding-left:24px;
+text-align:left;
+}
+
+div.tech-md{}
+
+div.box-container-md{
+ vertical-align:middle;
+margin-bottom:16px;
+}
+
+div.box-header-md{
+ display:block;
+width:100%;
+border-bottom: 1px solid lightgray;
+font-weight:bold;
+margin-bottom:6px;
+}
+
+div.Box-content-md{
+ display:block;
+width:100%;
+ vertical-align:middle;
+}
+
+html,body {
+font-weight: 400;
+font-style: normal;
+font-feature-settings: "lnum" 1;
+font-family: 'rawline', sans-serif; 
+-webkit-font-feature-settings: "lnum"; 
+-moz-font-feature-settings: "lnum"; 
+font-feature-settings: "lnum"; 
+color:black;
+}
+
+.portfolio-item .mega-entry{
+border:3px solid #432918;
+}
+.mega-metainf{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 28px;
+    color: white;
+    width: 89px;
+    height: 50px;
+    border: 0px solid #432918;
+    background-color: #432918;
+    padding: 4px;
+    padding-right: 2px;	
+    text-align: right;
+    white-space: nowrap;
+    
+   
+}
+.mega-metainf span.star{
+	font-size: 15px;
+	vertical-align: text-top;
+	display: inline-block;
+}
+
+.mega-metainf .positive-icon{
+    display: inline-block;
+    width: 30px;
+    height: 27px;
+    vertical-align: text-top;
+    margin-right: 1px;
+}
+.mega-sweet_fruit {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Iconografia-Caracteristicas-300517-min-two-min.png) 0px 0px no-repeat #432918;
+}
+.mega-soar_fruit{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Iconografia-Caracteristicas-300517-min-two-min.png) 0px -27px no-repeat #432918;
+}
+.mega-floral{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Iconografia-Caracteristicas-300517-min-two-min.png) 0px -54px no-repeat #432918;
+}
+.mega-criollo{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Iconografia-Caracteristicas-300517-min-two-min.png) 0px -81px no-repeat #432918;
+}
+.mega-cocoa {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Iconografia-Caracteristicas-300517-min-two-min.png) 0px -108px no-repeat #432918;
+}
+.mega-forest {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Iconografia-Caracteristicas-300517-min-two-min.png) 0px -134px no-repeat #432918;
+}
+.mega-herbal {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Iconografia-Caracteristicas-300517-min-two-min.png) 0px -161px no-repeat #432918;
+}
+.mega-awarded {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Iconografia-Caracteristicas-300517-min-two-min.png) 0px -190px no-repeat #432918;
+}
+.mega-certified {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Iconografia-Caracteristicas-300517-min-two-min.png) 0px -218px no-repeat #432918;
+}
+
+
+/* Listado de estilos para MUNDO de SABORES manual */
+.positive-chart p.list-icon{
+display: inline-block;
+padding-left:60px;
+padding-top:1px;
+height:55px;
+background: url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Sabores-G-300517-min-55-min.png) 0px
+}
+
+.positive-chart p.sweet_fruit {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Sabores-G-300517-min-55-min.png) 0px -1px no-repeat;
+}
+.positive-chart p.soar_fruit{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Sabores-G-300517-min-55-min.png) 0px -55px no-repeat;
+}
+.positive-chart p.floral{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Sabores-G-300517-min-55-min.png) 0px -110px no-repeat;
+}
+.positive-chart p.criollo{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Sabores-G-300517-min-55-min.png) 0px -165px no-repeat;
+}
+.positive-chart p.cocoa {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Sabores-G-300517-min-55-min.png) 0px -220px no-repeat;
+}
+.positive-chart p.forest {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Sabores-G-300517-min-55-min.png) 0px -275px no-repeat;
+}
+.positive-chart p.herbs {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Sabores-G-300517-min-55-min.png) 0px -330px no-repeat;
+}
+
+
+.fancybox-title ,.mega-hovertitle{}
+
+.portfolio-item .mega-hoverview, .portfolio-item .mega-hoverview::before{border:none;}
+.portfolio-item .mega-hoverlink, .portfolio-item .mega-hover a{display:none;}
+.portfolio-item .mega-hover a.portfolio{display:block;}
+
+ .portfolio-item .mega-hoverview i {    font-size: 35px;}
+
+ .portfolio-item .mega-hovertitle .mega-hoversubtitle{
+font-size:1.1em;
+}
+
+blockquote{
+font-size:18px;
+font-weight:bold;
+background-color:transparent;
+padding:0px 0px;
+margin:0px;
+text-align:justify;
+color:black;
+}
+
+div.cut-board p.p-step{
+margin-bottom:24px;
+}
+
+div.evaluation-block{
+width:100%;
+font-weight:bold;
+text-align:left;
+color:black;
+clear:both;
+}
+div.evaluation-block p{
+text-align:left; 
+margin:0px 0px 8px;
+padding:0px;
+margin-top:20px;
+font-size:16px;
+font-weight:normal;
+font-style: italic;
+}
+div.evaluation-block p.source-subitem{
+margin-top:-10px;
+margin-left:53px;
+}
+div.evaluation-item{clear: both;}
+div.evaluation-item p{font-size:15px;margin:0px;}
+div.evaluation-item > div{float:left;font-size:15px;}
+div.evaluation-block .acron-md{width:22px;text-align:center;}
+div.evaluation-block .equal-md{width:8px;text-align:center;}
+div.evaluation-block .acron-desc{width:137px;padding-left:4px;text-transform: uppercase;}
+
+div.evaluation-block .acron-value{width:85px;padding-left:4px;}
+div.evaluation-block .acron-value span{width:15px; height:14px; padding-left:2px;display:inline-block;}
+
+div.evaluation-block .acron-value span.ball-red{background:url("http://www.intercacao.com/wp-content/uploads/2017/01/niveles-intercacao.png") -27px 0px }
+div.evaluation-block .acron-value span.ball-orange{background:url("http://www.intercacao.com/wp-content/uploads/2017/01/niveles-intercacao.png") -13px 0px }
+div.evaluation-block .acron-value span.ball-yellow{background:url("http://www.intercacao.com/wp-content/uploads/2017/01/niveles-intercacao.png") 0px 0px }
+
+div.evaluation-block .acron-defi{padding-right:4px;font-weight:normal;width:360px;}
+
+@media (max-width: 1150px) { 
+div.evaluation-item{margin-top:25px;}
+div.evaluation-block .acron-md{width:auto;text-align:center;padding:0 6px;}
+div.evaluation-block .equal-md{width:auto;text-align:center;padding:0 2px;}
+div.evaluation-block .acron-desc{width:137px;padding:0 3px;clear:none;}
+div.evaluation-block .acron-value{clear:right;float:right;}
+div.evaluation-block .acron-defi{clear:left;width:360px;clear:none;}
+div.evaluation-item > div, div.evaluation-item p{font-size:15px;}
+} /*1150px*/
+
+img.home-intercacao-img{
+margin-top:150px;
+}
+
+@media (max-width: 450px) { 
+div.evaluation-item{margin-top:25px;}
+div.evaluation-block .acron-md{width:auto;text-align:center;padding:0px;}
+div.evaluation-block .equal-md{width:auto;text-align:center;padding:0 0 0 3px;}
+div.evaluation-block .acron-desc{width:137px;padding:0 0 0 3px;clear:none;}
+div.evaluation-block .acron-value{clear:right;float:right;}
+div.evaluation-block .acron-defi{clear:left;width:360px;clear:none;}
+div.evaluation-item > div, div.evaluation-item p{font-size:14px;}
+
+
+img.home-intercacao-img{
+margin-top:20px;
+}
+
+#home-section{
+background-position:-30px;
+}
+
+#aboutus-section, #us, #nosotros, #responsabilidadsocial-section, #socialresponsibilily-section {
+background:url('http://www.intercacao.com/wp-content/uploads/2017/01/lienzo-bg.jpg') repeat;
+}
+
+} /*450px*/
+
+
+ div.page-content div.container > h3{display:none;} 
+
+#aboutus-section, #us, #fullpage #aboutus-section, #fullpage #us-section, #fullpage #aboutus-section.section, #fullpage #us-section.section, #nosotros-section, #nosotros, #fullpage #nosotros-section, #fullpage #nosotros-section, #fullpage #nosotros-section.section, #fullpage #nosotros-section.section, #aboutus-section, #us, #nosotros, #responsabilidadsocial-section, #socialresponsibilily-section  {
+background-repeat: no-repeat;
+background-size:auto;
+background-position:top center;
+}
+
+#mundodesabores-section, #fullpage #mundodesabores-section,  #fullpage #mundodesabores-section.section,  #mundodesabores-section.section, #worldofflavors-section, #fullpage #worldofflavors-section,  #fullpage #worldofflavors-section.section,  #worldofflavors-section.section{
+background-repeat: repeat;
+background-size:auto;
+}
+
+.shadow-img img{
+-moz-box-shadow: 0px 1px 16px 8px #444;
+	-webkit-box-shadow: 0px 11px 16px 8px #444;
+	box-shadow: 0px 1px 16px 8px #444;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=90, Color='#444444')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=90, Color='#444444');
+}
+
+#footer-jg{
+
+}
+.contact-info-container {
+width:450px;
+margin:0px auto;
+margin-top:18px;
+}
+.contact-info-container,.contact-info-icon, ,.contact-info-icon-heih{
+color:#603813;
+text-align:center;
+}
+
+
+.heih-email{
+
+display:none;
+border:0px solid red;
+}
+.contact-info-container-heih,.contact-info-icon-heih{
+color:#cccccc;
+}
+.contact-info-icon-heih, .contact-info-text-heih{
+display:inline-block;
+
+}
+
+.contact-info-text-heih{
+color:#dddddd;
+
+}
+
+.contact-info{
+padding-left:20px;}
+
+
+.contact-info-container .contact-title h1{ text-align:center;font-size:30px;}
+
+.footer-panel{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/02/Contact-US-02-bg_240117.jpg) no-repeat top #ffffff;
+}
+
+.contact-info-container .contact-logo{
+text-align:center;
+padding-bottom:22px;
+}
+
+.contact-info-container ul li{
+text-align:left;
+}
+
+.portfolio-filter li.filter{
+text-transform: uppercase;
+font-size:0.88em;
+color:white;
+}
+.contact-info-icon span {
+background-color:#603813;
+}
+#footer-md, #fullpage #footer-md.section{
+background-size:auto;
+background-position:center top;
+}
+.contact-info-text{
+padding:4px 0 0 6px;
+}
+
+/* team members */
+.fab i{
+font-size:28px;
+}
+
+.owl-theme .owl-controls .owl-nav div.owl-next, .owl-theme .owl-controls .owl-nav div.owl-prev{
+font-size:40px;
+padding:6px 12px;
+}
+
+#socialresponsability-section .dark-background h3, #socialresponsability-section .dark-background p, #socialresponsability-section .dark-background .page-subtitle,#responsabilidadsocial-section .dark-background h3, #responsabilidadsocial-section .dark-background p, #responsabilidadsocial-section .dark-background .page-subtitle{
+color:white;
+}
+
+.social-media ul li a{
+color:#666666;
+font-size:32px;
+}
+ 
+.intercacao .progress, .intercacao .progress-bar,.progress-bar,.progress, .progress-bar { 
+font-size:14px;
+color:#f0f0f0;
+text-shadow:0 1px 1px #111111;
+background-color:#cfcfcf;
+  /* For browsers that do not support gradients  */
+  background: -webkit-linear-gradient(left,rgba(207,207,207,1),rgba(144,144,144,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(207,207,207,1),rgba(144,144,144,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(207,207,207,1),rgba(144,144,144,1)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(207,207,207,1), rgba(144,144,144,1)); /*Standard*/
+
+margin-bottom:0px;
+}
+
+.progress .icon-char-md{ 
+display:block;
+border:0px solid red; 
+width:56px; 
+height:55px;
+left:0px;
+position:absolute;
+margin-top:0px;
+background-color:#ffffff;
+}
+
+.progress-bar{
+position:relative;
+box-sizing: border-box;
+left: 40px;
+}
+
+.progress-title{
+padding:0 0 0 5px;
+width:150px;
+text-align:left;
+}
+
+.progress-percentage{
+    float: right;
+    margin-top: 13px;
+    color: #ffffff;
+    font-size: 18px;
+    position:absolute;
+    right:8px;
+    letter-spacing: 2px;
+}
+
+p.progress-desc{
+font-size:16px;
+color:#333333;
+margin:0px;
+margin-bottom:12px;
+margin-left:70px;
+}
+.sweet_fruit .icon-char-md{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/intercacao-icon-sprites-55JG-min.png) -2px 0px white;
+}
+.soar_fruit .icon-char-md{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/intercacao-icon-sprites-55JG-min.png) -2px -80px white;
+}
+.floral .icon-char-md{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/intercacao-icon-sprites-55JG-min.png) -2px -159px white;
+}
+.criollo .icon-char-md{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/intercacao-icon-sprites-55JG-min.png) -1px -235px white;
+}
+.cocoa .icon-char-md{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/intercacao-icon-sprites-55JG-min.png) -2px -312px white;
+}
+.forest .icon-char-md{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/intercacao-icon-sprites-55JG-min.png) -2px -389px white;
+}
+.herbs .icon-char-md{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/intercacao-icon-sprites-55JG-min.png) -2px -465px white;
+}
+.intercacao .progress-bar{
+border-left:solid 12px white;
+}
+.sweet_fruit .progress-bar{
+border-color:#e50d24;
+}
+.soar_fruit .progress-bar{
+border-color:#f29120;
+}
+.floral .progress-bar{
+border-color:#e00182;
+}
+.criollo .progress-bar{
+border-color:#c7a069;
+}
+.cocoa .progress-bar{
+border-color:#6a3a16;
+}
+.forest .progress-bar{
+border-color:#97be2d;
+}
+.herbs .progress-bar{
+border-color:#fedc1b;
+}
+
+/*
+.progress .sweet_fruit{ background-color:#D7BBFF;}
+.progress .soar_fruit{ background-color:#ffc8a2;}
+.progress .floral{ background-color:#dc579f;}
+.progress .criollo{ background-color:#daa520;}
+.progress .cocoa{ background-color:#452209;}
+.progress .forest{ background-color:#6aa232;}
+.progress .herbs{ background-color: #e5a2b1;}
+*/
+
+.iconized .progress, .progress, .intercacao .progress { 
+height:55px; margin:0px;margin-top:0px;margin-bottom:0px;
+}
+
+.iconized .progress-bar {
+ line-height:55px;
+  background: #432918; /* For browsers that do not support gradients  */
+  background: -webkit-linear-gradient(left,rgba(67,41,24,0.80),rgba(67,41,24,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(67,41,24,0.80),rgba(67,41,24,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(67,41,24,0.80),rgba(67,41,24,1)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(67,41,24,0.80), rgba(67,41,24,1)); /*Standard*/
+position:relative;
+box-sizing: border-box;
+left: 40px;
+}
+
+/*
+.iconized .progress .sweet_fruit{ background-color:#653216;}
+.iconized .progress .soar_fruit{background-color: #653216;}
+.iconized .progress .floral{background-color: #653216;}
+.iconized .progress .criollo{background-color: #653216;}
+.iconized .progress .cocoa{background-color: #653216;}
+.iconized .progress .forest{background-color: #653216;}
+.iconized .progress .herbs{background-color: #653216;}
+
+
+.iconized .progress .sweet_fruit::before{content:"";display:block;width:100px;height:54px;background: url(http://www.intercacao.com/wp-content/uploads/2017/02/CaracteristicasPositivas-sprite.png) 0px -100px; }
+.iconized .progress .soar_fruit{}
+.iconized .progress .floral{}
+.iconized .progress .criollo{}
+.iconized .progress .cocoa{}
+.iconized .progress .forest{}
+.iconized .progress .herbs{}
+*/
+
+.copyright img{margin-bottom:12px;}
+.copyright{
+color:#ffffff; font-size:10px;}
+.copyright.light-content{color:#666666;}
+
+
+.loader-wrapper{
+background:url('http://www.intercacao.com/wp-content/uploads/2017/02/InterCacao-simple-smaller.png') #fff no-repeat center center;
+}
+
+/* cambie esta ubicacion en loader-wrapper temporalmente */
+
+#responsabilidadsocial-section img, #socialresponsibilily-section img{
+padding-top:20px;
+}
+
+
+
+.table-filters{
+	display: table;   /* Allow the centering to work */
+	margin: 6px auto 4px;
+	
+}
+.table-filter ul{
+	min-width: 100%;
+}
+.table-filters ul li, .portfolio-filter .table-filters li.filter{
+display: inline-block;
+height: 25px;
+padding-left: 30px;
+border:0px solid red;
+width: 210px;
+text-align: left;
+
+}
+
+.table-filters ul li.sweet_fruit {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -0px no-repeat;
+	background-size:25px;
+
+}
+.table-filters ul li.soar_fruit{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -25px no-repeat;
+	background-size:25px;
+}
+.table-filters ul li.floral{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -50px no-repeat;
+	background-size:25px;
+}
+.table-filters ul li.criollo{
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -75px no-repeat;
+	background-size:25px;
+}
+.table-filters ul li.cocoa {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -100px no-repeat;
+	background-size:25px;
+}
+.table-filters ul li.forest {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -125px no-repeat;
+	background-size:25px;
+}
+.table-filters ul li.herbs {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -150px no-repeat;
+	background-size:25px;
+}
+.table-filters ul li.top-rated {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -200px no-repeat;
+	background-size:25px;
+}
+.table-filters ul li.acriollado {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -225px no-repeat;
+
+	background-size:25px;
+}
+.table-filters ul li.fermented {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -250px no-repeat;
+
+	background-size:25px;
+}
+.table-filters ul li.certified {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -175px no-repeat;
+
+	background-size:25px;
+}
+.table-filters ul li.colombia {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -274px no-repeat;
+	background-size:25px;
+}
+.table-filters ul li.venezuela {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -299px no-repeat;
+	background-size:25px;
+}
+.table-filters ul li.peru {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png) 0px -324px no-repeat;
+	background-size:25px;
+}
+.table-filters ul li.awarded {
+background:url(http://www.intercacao.com/wp-content/uploads/2017/05/Sprite-Iconos-Filtros-JG-min.png?asd=1) 0px -350px no-repeat;
+	background-size:25px;
+}
+
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    color:gray;
+    font-weight: normal;
+    margin: 20px auto 0px;
+    
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: gray;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.portfolio-filter li.filter:after{
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	width: 0px;
+	height: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	background: none;
+}
+
+div.poweredby{
+	display:none;
+}
+
+div.del-peru{
+	background:url(http://www.intercacao.com/wp-content/uploads/2017/04/Fondo-Laberinto-Inca-min.png) repeat-y right;
+}
+
+div.product-img img{width:420px;}
+
+div.cacaotales-logo{
+display:none;
+}
+div.cacaotales-logo img{
+ opacity:0.7;
+}
+
+.footer-logo footer-logo-img, .footer-logo img{
+max-width:440px;
+
+}
+
+span.date-taken{
+font-size:12px;
+text-align: center;
+display: block;
+  margin: -30px auto 20px;
+}
+
+.logo a img{
+width:160px;
+}
+
+.contact-info-icon span{
+display:none;
+}
+
+.contact-info-icon span.md-icon, .contact-info-icon-heih span.md-icon{
+display:inline-block;
+border-radius:30%;
+height:48px;
+}
+
+.contact-info-icon span.md-location-icon{
+background:url(http://www.intercacao.com/en/files/2017/04/Sprite-Contact-US-200417-min-social.png);
+}
+.contact-info-icon span.md-whatsapp-icon{
+background:url(http://www.intercacao.com/en/files/2017/04/Sprite-Contact-US-200417-min-social.png) 0 -141px;
+}
+.contact-info-icon span.md-email-icon{
+background:url(http://www.intercacao.com/en/files/2017/04/Sprite-Contact-US-200417-min-social.png) 0 -92px;
+}
+.contact-info-icon span.md-facebook-icon{
+background:url(http://www.intercacao.com/en/files/2017/04/Sprite-Contact-US-200417-min-social.png) 0 -239px;
+}
+.contact-info-icon span.md-instagram-icon{
+background:url(http://www.intercacao.com/en/files/2017/04/Sprite-Contact-US-200417-min-social.png) 0 -192px;
+}
+
+.contact-info-text a, .contact-info-text, .contact-info-text a:hover{
+cursor:pointer;
+color:#603813;
+}
+
+.contact-info-text-heih a, .contact-info-text-heih a:hover{
+cursor:pointer;
+color:#ffffff;
+}
+
+.img-hidden{
+display:none;
+}
+
+
+
+.heih .home-section-cut{
+    box-shadow: -5px 0px 30px 2px #000000;
+
+}
+
+.heih .vc_row-has-fill>.vc_column_container>.vc_column-inner, .heih .vc_column-inner {
+padding-top:0px;
+padding-left:0px;
+padding-right:0px;
+}
+
+.heih div.cut-board > p span.cut-value{
+background:#444444 !important;
+}
+
+.heih .vc_col-has-fill>.vc_column-inner, 
+.heih .vc_row-has-fill+.vc_row-full-width+.vc_row>.vc_column_container>.vc_column-inner, 
+.heih .vc_row-has-fill+.vc_row>.vc_column_container>.vc_column-inner,
+.heih .vc_row-has-fill+.vc_vc_row>.vc_row>.vc_vc_column>.vc_column_container>.vc_column-inner, 
+.heih .vc_row-has-fill+.vc_vc_row_inner>.vc_row>.vc_vc_column_inner>.vc_column_container>.vc_column-inner, .heih .vc_row-has-fill>.vc_column_container>.vc_column-inner,
+.heih .vc_row-has-fill>.vc_row>.vc_vc_column>.vc_column_container>.vc_column-inner,
+.heih .vc_row-has-fill>.vc_vc_column_inner>.vc_column_container>.vc_column-inner,
+.heih .wpb_column .vc_column-inner {
+padding-top:0px;
+}
+
+.heih .wpb_content_element{
+margin-bottom:0px;
+}
+
+.heih .cocoa-product{
+display:none;
+}
+
+.portfolio-item .mega-hover{
+background-color: rgba(0,0,0,0.85);
+}
+
+
+/* Footer heih inicio*/
+
+	
+.footer-panel .container {
+    position: relative;
+    text-align: center;
+    padding: 60px 15px;
+    z-index: 2;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.heih-products-container{
+display:none;
+width: 80%;
+border: 0px solid red;
+margin: 50px auto;
+	
+}
+.heih-products-container .wrapper{
+	margin: 0 auto;
+	width: 95%;
+	border: 0px solid green;
+	height: 100px;
+
+	
+}
+
+
+.heih-product{
+	width: 23%;
+	float: left;
+	margin: 5px;
+	box-sizing: border-box;
+
+}
+.heih-product img{
+	width: 100%;
+}
+.heih-product a:hover{
+	opacity:0.8;
+}
+
+
+.distribuido-text p{
+
+	clear:both;
+	padding-top: 20px;
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 0px;
+	font-size: 0.7em;
+	color:#999999;
+
+}
+ p.drinkyourfood{
+font-size: 3em;
+font-family: 'Giorgio';
+text-align: center;
+display:none;
+	
+}
+ p span.blue{color:deepskyblue;}
+
+ p span.yellow{color:#F0981B;}
+
+ p span.red{color:red;}
+ .heih-active{
+	 border:2px solid #F0981B;
+ }
+
+.footer-logo footer-logo-img, .footer-logo img {
+max-width: 200px;
+}
+
+div.copyright {
+	opacity: 0.5;
+}
+
+@media (max-width: 720px) { 
+
+	.footer-logo .footer-logo-img, .footer-logo img{
+		width:125px;
+	}
+
+	.heih-product{
+	  width: 46%;
+	}
+	
+	
+	.heih-product:nth-child(2){
+     clear:right;
+    }
+	.heih-products-container .wrapper{
+	 margin-left:5px;
+	}
+
+p.drinkyourfood{
+ font-size:2em;
+}
+
+.distribuido-text p{
+  font-size:0.75em;
+}
+	
+.heih-products-container{
+	margin:20px auto;
+}
+	
+
+}
+
+
+/* Footer heih fin*/
+
+.borde-fotos-perfil{
+	border-left: 20px solid green;
+
+}
+
+
+#fp-nav{
+display:none;
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+	.iconized .wpb_single_image img{
+		
+
+	}
+	.iconized .progress-bar-wrapper {
+		
+	}
+	
+	p.progress-desc{
+		margin-bottom:4px;
+		font-size:15px;
+	}
+
+
+}
+
